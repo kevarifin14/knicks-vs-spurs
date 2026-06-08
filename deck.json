@@ -4,6 +4,6 @@
   "mark": "bball",
   "output": "new-york-knicks-vs-san-antonio-spurs-a-history-of-both-teams.html",
   "theme": "luxe",
-  "accent": "#F58426",
+  "rootVars": "--p:#C98F44;--p2:#E7BE78;--p3:#9C6E2C;--bg:#08070b;--ink:#F1ECE3;--mut:#9E978B;--glass:rgba(255,255,255,.05);--line:rgba(255,255,255,.11);--glassH:rgba(255,255,255,.085);--lineH:rgba(255,255,255,.26)",
   "title": "Knicks vs. Spurs"
 }

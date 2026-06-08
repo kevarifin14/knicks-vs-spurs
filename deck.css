@@ -1,0 +1,51 @@
+/* ── Knicks vs. Spurs ─────────────────────────────────────────────────────────
+   Neutral hardwood-dark base (set in deck.json); each franchise carries its own
+   color. --p2 is the painted accent (kickers, stat numbers, tags), --p the
+   tick-lines/borders/gradient. So team color lives in --p2.                    */
+
+/* New York Knicks — orange numbers, blue lines */
+.slide.knicks{
+  --p:#3D8FE8;   --p2:#F58426;  --p3:#1763A8;
+  --glass:rgba(245,132,38,.055); --glassH:rgba(245,132,38,.10);
+  --line:rgba(61,143,232,.22);   --lineH:rgba(245,132,38,.40);
+}
+/* San Antonio Spurs — bright silver on black */
+.slide.spurs{
+  --p:#9AA3AD;   --p2:#DDE3EA;  --p3:#6E7681;
+  --glass:rgba(221,227,234,.045); --glassH:rgba(221,227,234,.09);
+  --line:rgba(221,227,234,.16);   --lineH:rgba(221,227,234,.34);
+}
+
+/* Per-card team tint (the lore slide) */
+.knk{--p:#3D8FE8;--p2:#F58426;--line:rgba(61,143,232,.24)}
+.spr{--p:#9AA3AD;--p2:#DDE3EA;--line:rgba(221,227,234,.18)}
+.knk .ct{color:#F8964A}
+.spr .ct{color:#E6EBF0}
+
+/* Transition headline foreshadows both teams: Knicks orange → Spurs silver */
+.t-slide .t .vs-grad{
+  background:linear-gradient(96deg,#F58426 0%,#F7A55C 34%,#C9D0D8 66%,#EEF2F6 100%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+
+/* Closing line, colored by franchise (out-specify .punch b) */
+.punch .ink-knk{color:#F8964A}
+.punch .ink-spr{color:#E6EBF0;font-weight:600}
+
+/* Soft team glow behind the cover logos */
+.tglow{position:relative;display:inline-flex}
+.tglow::after{content:"";position:absolute;inset:-22% -14%;border-radius:50%;z-index:-1;
+  background:radial-gradient(circle,var(--glow),transparent 68%);filter:blur(28px)}
+
+/* The black Spurs mark is invisible on a dark slide — lift it to silver */
+.logo-spurs{filter:brightness(0) invert(.86)}
+
+/* Replace luxe's purple aurora with neutral depth: warm-left, cool-right */
+.aurora{opacity:.5}
+.b1{background:radial-gradient(circle,#5a3613,transparent 62%)}
+.b2{background:radial-gradient(circle,#23323c,transparent 62%)}
+.b3{background:radial-gradient(circle,#2a2113,transparent 60%)}
+
+/* Retune the engine's leftover purple glints to the hardwood accent */
+#bar{box-shadow:0 0 12px rgba(201,143,68,.6)}
+#dots button.on::before{box-shadow:0 0 10px rgba(201,143,68,.55)}
